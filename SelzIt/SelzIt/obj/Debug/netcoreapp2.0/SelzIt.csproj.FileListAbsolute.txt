@@ -1,0 +1,11 @@
+c:\vswip\SelzIt\SelzIt\bin\Debug\netcoreapp2.0\SelzIt.deps.json
+c:\vswip\SelzIt\SelzIt\bin\Debug\netcoreapp2.0\SelzIt.runtimeconfig.json
+c:\vswip\SelzIt\SelzIt\bin\Debug\netcoreapp2.0\SelzIt.runtimeconfig.dev.json
+c:\vswip\SelzIt\SelzIt\bin\Debug\netcoreapp2.0\SelzIt.dll
+c:\vswip\SelzIt\SelzIt\bin\Debug\netcoreapp2.0\SelzIt.pdb
+c:\vswip\SelzIt\SelzIt\obj\Debug\netcoreapp2.0\SelzIt.csprojResolveAssemblyReference.cache
+c:\vswip\SelzIt\SelzIt\obj\Debug\netcoreapp2.0\SelzIt.csproj.CoreCompileInputs.cache
+c:\vswip\SelzIt\SelzIt\obj\Debug\netcoreapp2.0\SelzIt.AssemblyInfoInputs.cache
+c:\vswip\SelzIt\SelzIt\obj\Debug\netcoreapp2.0\SelzIt.AssemblyInfo.cs
+c:\vswip\SelzIt\SelzIt\obj\Debug\netcoreapp2.0\SelzIt.dll
+c:\vswip\SelzIt\SelzIt\obj\Debug\netcoreapp2.0\SelzIt.pdb

@@ -1,0 +1,118 @@
+﻿@model InvoiceModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="span4">
+            <address>
+                <strong>@Model.BusinessAddress.BusinessName</strong><br>
+                @Model.BusinessAddress.Address1<br>
+                @Model.BusinessAddress.Address2<br>
+                @Model.BusinessAddress.City, @Model.BusinessAddress.State @Model.BusinessAddress.PostalCode<br>
+            </address>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="span4">
+            Bill To:
+            <address>
+                <strong>@Model.BusinessAddress.BusinessName</strong><br>
+                @Model.BusinessAddress.Address1<br>
+                @Model.BusinessAddress.Address2<br>
+                @Model.BusinessAddress.City, @Model.BusinessAddress.State @Model.BusinessAddress.PostalCode<br>
+            </address>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4 well">
+            <table class="invoice-head">
+                <tbody>
+                    <tr>
+                        <td class="pull-right"><strong>Invoice #</strong></td>
+                        <td>@Model.Id</td>
+                    </tr>
+                    <tr>
+                        <td class="pull-right"><strong>Date</strong></td>
+                        <td>@Model.Date</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="span8">
+            <h2>Invoice</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span8 well invoice-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Discount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td>@item.Description</td>
+                            <td>@item.Quantity</td>
+                            <td class="text-right">@item.Amount.ToString("C")</td>
+                            <td class="text-right">@item.Discount.ToString("C")</td>
+                        </tr>
+                    }
+                    <tr>
+
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><strong>Discount</strong></td>
+                        <td class="text-right"><strong>@Model.Discount()</strong></td>
+                    </tr>
+                    <tr>
+
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><strong>Subtotal</strong></td>
+                        <td class="text-right"><strong>@Model.Subtotal()</strong></td>
+                    </tr>
+
+                    <tr>
+
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><strong>Tax</strong></td>
+                        <td class="text-right"><strong>@Model.Tax()</strong></td>
+                    </tr>
+                    <tr>
+
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><strong>Total</strong></td>
+                        <td class="text-right"><strong>@Model.Total()</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span8 well invoice-thank">
+            <h5 style="text-align:center;">Thank You!</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <strong>Phone:</strong> <a href='"tel:" + @Model.Phone'>@Model.Phone</a>
+        </div>
+        <div class="span3">
+            <strong>Email:</strong> <a href='"mailto:" + @Model.Email'>@Model.Email</a>
+        </div>
+    </div>
+</div>
